@@ -1,13 +1,13 @@
 
 rule all:
     input:
-        'patient/patient_gene_scores.txt'
+        'patient/patient_acho_gene_scores.txt'
     
 rule clin_to_phen:
     input:
-        txt = "patient/hcm.txt"
+        txt = "patient/acho.txt"
     output:
-        hpo_terms = "patient/patient_hpo_terms.txt"
+        hpo_terms = "patient/patient_acho_terms.txt"
     conda: "envs/hpo_gene_mapping.yaml"
     shell:
         """
@@ -32,9 +32,9 @@ rule map_phenotype:
         obo = 'data/hp.obo',
         ics = 'data/hpo_ics.txt',
         gene_hpo = 'data/genes_to_phenotype.txt',
-        patient_hpo = 'patient/patient_hpo_terms.txt'
+        patient_hpo = 'patient/patient_acho_terms.txt'
     output:
-        mapping = 'patient/patient_gene_scores.txt'
+        mapping = 'patient/patient_acho_gene_scores.txt'
     conda: "envs/hpo_gene_mapping.yaml"
     shell:
         '''

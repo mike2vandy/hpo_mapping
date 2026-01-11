@@ -8,4 +8,4 @@ Tool versions and packages used for snakemake are listed in `envs/hpo_gene_mappi
 
 Clinical paragraphs as the starting point are in `patients/`, along with extracted HPO terms, and ranked gene lists.
 
-Scripts for generating IC scores and ranking genes are in `scripts\` written in python. 
+Scripts for generating IC scores and ranking genes are in `scripts/` written in python. 

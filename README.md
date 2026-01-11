@@ -2,6 +2,8 @@
 
 This code mostly replicates the core of Exomiser to rank genes in order from most likely to least likely of being associated with a rare Mendelian genetic disease given a clinical description. 
 
+The snakemake file is currently only written for the Achondoplasia 'patient', as an example. 
+
 HPO information is in `data/`
 
 Tool versions and packages used for snakemake are listed in `envs/hpo_gene_mapping.yaml`
